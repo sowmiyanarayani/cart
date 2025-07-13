@@ -1,0 +1,26 @@
+{
+  "carts": [
+    { "name": "Apple", "category": "fruit", "price": 30, "quantity": 12 },
+    { "name": "Banana", "category": "fruit", "price": 10, "quantity": 21 },
+    { "name": "Onion", "category": "vegetable", "price": 100, "quantity": 12 },
+    { "name": "Cabbage", "category": "vegetable", "price": 50, "quantity": 6 },
+    { "name": "Notebook", "category": "stationery", "price": 40, "quantity": 21 },
+    { "name": "pen", "category": "stationery", "price": 10, "quantity": 21 }
+  ],
+  "itemDiscounts": {
+    "Apple": 10,
+    "Onion": 20
+  },
+  "categoryDiscounts": {
+    "fruit": 5,
+    "vegetable": 15,
+    "stationery": 0
+  },
+  "taxRates": {
+    "fruit": 5,
+    "vegetable": 12,
+    "stationery": 2
+  },
+  "itemsWithOffer": ["Apple", "Banana"],
+  "promoCode": { "SAVE10": 10 }
+}
