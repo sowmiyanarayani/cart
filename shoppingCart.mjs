@@ -3,8 +3,6 @@ import {
   getDiscountPercent,
   getTaxPercent,
   getPayableQuantity,
-  applyPercentageDiscount,
-  applyFixedAmount,
   applyItemCostBasedDiscount,
   applyPromoCode
 } from './cartUtils.mjs';
@@ -49,7 +47,7 @@ const calculateItemTotal = (item) => {
   };
 };
 
-const main = (code = "") => {
+const main = (code ) => {
   const shoppingCart = carts.map(calculateItemTotal);
   const grandTotal = shoppingCart.reduce((sum, item) => sum + item.FinalTotal, 0);
   const totalAfterPromo = applyPromoCode(grandTotal, code, promoCode);

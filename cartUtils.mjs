@@ -13,9 +13,9 @@ const getPayableQuantity = (item, itemsWithOffer) =>
     ? item.quantity - Math.floor(item.quantity / 3)
     : item.quantity;
 
-const applyPercentageDiscount = (amount) => amount > 200 ?  amount - (amount * 2) / 100 :amount;
+const applyPercentageDiscount = (amount) => amount > 200 ?  amount - (amount * 2) / 100 : amount;
 
-const applyFixedAmount = (amount) => amount >= 100 ?  amount - 5 :amount;
+const applyFixedAmount = (amount) => amount >= 100 ?  amount - 5 : amount;
 
 const applyItemCostBasedDiscount = (amount) =>amount ? applyPercentageDiscount(amount) : applyFixedAmount(amount);
     
@@ -29,8 +29,6 @@ export {
 getDiscountPercent,
 getTaxPercent,
 getPayableQuantity,
-applyPercentageDiscount,
-applyFixedAmount,
 applyItemCostBasedDiscount,
 applyPromoCode
 }
