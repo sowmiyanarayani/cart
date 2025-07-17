@@ -25,7 +25,7 @@ const applyPromoCode = (total, code, promoCode) =>
     ? total - (total * promoCode[code]) / 100
     : total;
 
-export {
+module.exports = {
 getDiscountPercent,
 getTaxPercent,
 getPayableQuantity,

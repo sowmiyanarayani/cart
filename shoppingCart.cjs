@@ -1,13 +1,11 @@
-import { readFile } from 'fs/promises';
-import {
+const config = require('./config.json');
+const {
   getDiscountPercent,
   getTaxPercent,
   getPayableQuantity,
   applyItemCostBasedDiscount,
   applyPromoCode
-} from './cartUtils.mjs';
-
-const config = JSON.parse(await readFile('./config.json', 'utf-8'));
+} = require('./cartUtils.cjs');
 
 const {
   carts,
