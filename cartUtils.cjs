@@ -2,7 +2,7 @@ const getDiscountPercent = (item, itemDiscounts, categoryDiscounts) => {
   const itemLevel = itemDiscounts[item.name];
   const categoryLevel = categoryDiscounts[item.category];
 
-  return itemLevel ?? categoryLevel ?? 0;
+  return itemLevel || categoryLevel || 0;
 };
 
 const getTaxPercent = (item, taxRates) =>
@@ -26,9 +26,9 @@ const applyPromoCode = (total, code, promoCode) =>
     : total;
 
 module.exports = {
-getDiscountPercent,
-getTaxPercent,
-getPayableQuantity,
-applyItemCostBasedDiscount,
-applyPromoCode
-}
+  getDiscountPercent,
+  getTaxPercent,
+  getPayableQuantity,
+  applyItemCostBasedDiscount,
+  applyPromoCode
+};
