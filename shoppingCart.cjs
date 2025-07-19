@@ -8,7 +8,7 @@ const {
 } = require('./cartUtils.cjs');
 
 const {
-  carts,
+  cart,
   itemDiscounts,
   categoryDiscounts,
   taxRates,
@@ -25,6 +25,7 @@ const calculateItemTotal = (item) => {
   const afterDiscount = subtotal - discountAmount;
 
   const costAfterExtraDiscount = applyItemCostBasedDiscount(afterDiscount);
+
   const taxPercent = getTaxPercent(item, taxRates);
   const taxAmount = (costAfterExtraDiscount * taxPercent) / 100;
 
@@ -46,7 +47,7 @@ const calculateItemTotal = (item) => {
 };
 
 const main = (code ) => {
-  const shoppingCart = carts.map(calculateItemTotal);
+  const shoppingCart = cart.map(calculateItemTotal);
   const grandTotal = shoppingCart.reduce((sum, item) => sum + item.FinalTotal, 0);
   const totalAfterPromo = applyPromoCode(grandTotal, code, promoCode);
 

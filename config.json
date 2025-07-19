@@ -1,5 +1,5 @@
 {
-  "carts": [
+  "cart": [
     { "name": "Apple", "category": "fruit", "price": 30, "quantity": 12 },
     { "name": "Banana", "category": "fruit", "price": 10, "quantity": 21 },
     { "name": "Onion", "category": "vegetable", "price": 100, "quantity": 12 },
